@@ -26,10 +26,10 @@ connection.connect((err) => {
   console.log("connected!");
 });
 
-app.use(express.static(path.join(__dirname, "./front/build")));
+app.use(express.static(path.join(__dirname, "../front/build")));
 
 app.get("/", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "./front/build/index.html"));
+  res.sendFile(path.join(__dirname, "../front/build/index.html"));
 });
 
 const menu_query = `
